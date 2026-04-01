@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WORD SEARCH GAME</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="cute si bree">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: center;
+            background: rgb(9, 99, 126);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgb(255, 255, 255);
+            padding: 30px 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        table {
+            border: 3px solid black;
+            border-spacing: 10px;
+            margin: 20px auto;
+        }
+
+        th {
+            border: 3px solid black;
+            padding: 10px;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .word {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 50px;
+            border: none;
+            background-color: #F4C2C2;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #C8ACA9;
+            transform: translateY(-2px) scale(1.03);
+        }
+
+        .game button p {
+            margin: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <p>Welcome to the <span style="font-weight: bold;">Word Search Game</span>, where your goal is to 
+            <span style="font-weight: bold;">find hidden words within a grid of letters</span>. As you begin
+            the game, you are presented with a square grid filled with random letters, along with a list of words that you
+            need to locate. These words are cleverly hidden in different directions. They may appear 
+            <span style="font-weight: bold;">horizontally, vertically, or diagonally, and can even be spelled backward.</span>
+            It’s up to you to carefully scan the grid and spot each word!
+            <br><br>
+            As you explore the word search puzzle, you try to find words hidden within the grid of letters. 
+            <span style="font-weight: bold;">When you think you’ve spotted a word, you type it into the game.</span>
+            The system will then check your answer. If the word you entered matches one of the hidden words in the puzzle, 
+            the game will confirm that the word is correct and mark it as found. However, if the word is not part of the puzzle, 
+            the game will display a message saying that the word does not exist.
+            <br><br>
+            To keep things even more exciting, the game has three levels of difficulty: 
+            <span style="font-weight: bold;">Easy, Medium, and Hard.</span> Each level gets trickier, with bigger grids and more cleverly hidden words 
+            that will really test your skills. But here’s the best part, if you conquer all three levels, you win a special 
+            <span style="font-weight: bold;">reward: a Jaypee Peroy!</span>
+        </p>
+
+        <table>
+            <caption><h1>SAMPLE GAME!</h1></caption>
+            <tr>
+                <th>A</th>
+                <th>J</th>
+                <th>F</th>
+            </tr>
+            <tr>
+                <th>C</th>
+                <th>A</th>
+                <th>T</th>
+            </tr>
+            <tr>
+                <th>U</th>
+                <th>A</th>
+                <th>V</th>
+            </tr>
+        </table>
+
+        <div class="word">
+            <input type="text" id="userWord" placeholder="Type word here">
+            <button onclick="checkWordTutorialMode()">Submit</button>
+        </div>
+        <p id="result" style="text-align:center; margin-top: 10px;"></p>
+
+        <br>
+
+        <div class="game" style="text-align: center;">
+            <a href="startgame.html">
+                <button type="button"><p>Proceed to Game!</p></button>
+            </a>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

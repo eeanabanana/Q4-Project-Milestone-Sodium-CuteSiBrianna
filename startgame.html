@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="User">
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgb(9, 99, 126);
+        }
+
+        .header {
+            background: rgb(255, 255, 255);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 50px;
+            border: none;
+            background-color: #F4C2C2;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #C8ACA9;
+        }
+
+        .button {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            background-color: #F4C2C2;
+            color: #555555;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .button:hover {
+            background-color: #C8ACA9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome to our game!</h1>
+        <h3>Enter a username to start</h3>
+
+        <form id="usernameForm" onsubmit="return validateForm()">
+            <input type="text" id="username" placeholder="Enter username" required pattern="[A-Za-z0-9_]+">
+            <button type="submit">Start</button>
+        </form>
+
+        <p id="welcome"></p>
+
+        <div class="buttons">
+            <a href="easy.html" class="button">Easy Mode</a>
+            <a href="medium.html" class="button">Medium Mode</a>
+            <a href="hard.html" class="button">Hard Mode</a>
+        </div>
+    </div>
+
+    <script src="startgame.js"></script>
+</body>
+
+</html>
