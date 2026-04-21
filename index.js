@@ -6,6 +6,7 @@ function checkWordTutorialMode() {
     if (words.includes(input)) {
         result.innerHTML = "Correct! You found " + input + " Proceed to Play!";
         result.style.color = "green";
+        result.CAT="green";
     } else {
         result.innerHTML = "Not in the puzzle. Try again!";
         result.style.color = "red";
